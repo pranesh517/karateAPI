@@ -1,0 +1,18 @@
+09:43:54.235 request:
+1 > GET http://10.102.0.45/wsdal101test/service.svc/ver
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: application/json
+1 > Host: 10.102.0.45
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_221)
+
+09:43:59.537 response time in milliseconds: 5299.65
+1 < 200
+1 < Content-Length: 18
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 18 Sep 2019 08:43:14 GMT
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+"10.1 build 39778"
+
+7:22:29.639 assertion failed: path: $, actual: '"10.1 build 39778"', expected: '10.1 build 39778', reason: not equal

@@ -1,0 +1,10 @@
+<testsuite failures="0" name="services/wsdlversion/API_GetWsdlVersion.feature" skipped="0" tests="1" time="1.587176">
+  <testcase classname="services.wsdlversion.API_GetWsdlVersion" name="API_001: To Get the WSDAL version back" time="1.587176">
+    <system-out>Given url wsdalUrl ........................................................ passed
+And header Content-Type = "application/json" .............................. passed
+Given path getVersion ..................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == '"10.1 build 39778"' ................................ passed</system-out>
+  </testcase>
+</testsuite>

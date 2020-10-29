@@ -1,0 +1,22 @@
+<testsuite failures="0" name="services/sample/API_GetEmployeeData.feature" skipped="0" tests="1" time="3.414044">
+  <testcase classname="services.sample.API_GetEmployeeData" name="SampleTest123: To Verify Get Employee API" time="3.414044">
+    <system-out>Given url baseUrl ......................................................... passed
+And def createEmployeeReq = read('data/standardCreateEmployeeReq.json') ... passed
+And def callingJavaMethod = Java.type('com.utils.GenerateUtility') ........ passed
+Given def employeeName = callingJavaMethod.generateRandomName(); .......... passed
+And set createEmployeeReq.name = employeeName ............................. passed
+And header Content-Type = "application/json" .............................. passed
+And path create ........................................................... passed
+And request createEmployeeReq ............................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.name == employeeName ................................... passed
+And def employeeId = response.id .......................................... passed
+Given path employee+'/'+ employeeId ....................................... passed
+And header Content-Type = "application/json" .............................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.id == employeeId ....................................... passed
+And match response.employee_name == employeeName .......................... passed</system-out>
+  </testcase>
+</testsuite>
